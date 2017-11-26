@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/EKART">
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="30" maxIdle="10" maxWait="1000" name="jdbc/ecommerce" password="admin" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/ecommerce" username="root"/>
+</Context>

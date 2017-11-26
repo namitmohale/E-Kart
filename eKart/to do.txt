@@ -1,0 +1,5 @@
+1.price range 
+2.title neurocart to E-Kart
+3.delete the adult category from database 
+4.Remove the history right side panel
+5.

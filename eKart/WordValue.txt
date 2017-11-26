@@ -1,0 +1,4 @@
+good = 1
+bad = -1
+honest = 1
+uggly = -1

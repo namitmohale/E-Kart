@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <!--
+    //////////DATABASE////////////
+-->
+ 
+    <context-param>
+        <description>Location to store uploaded file</description>
+        <param-name>file-upload</param-name>
+        <param-value>c:\temp_search_image</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>service.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addProduct</servlet-name>
+        <servlet-class>Admin.addProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>service.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NotSignedIn</servlet-name>
+        <servlet-class>service.NotSignedIn</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NotSignedIn</servlet-name>
+        <url-pattern>/NotSignedIn</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Registration</servlet-name>
+        <servlet-class>service.Registration</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Registration</servlet-name>
+        <url-pattern>/Registration</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ConfirmRegistration</servlet-name>
+        <servlet-class>service.ConfirmRegistration</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConfirmRegistration</servlet-name>
+        <url-pattern>/ConfirmRegistration</url-pattern>
+    </servlet-mapping>
+    <!--Filter Mapping-->
+    <filter>
+        <filter-name>RegistrationFilter</filter-name>
+        <filter-class>Filters.RegistrationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RegistrationFilter</filter-name>
+        <url-pattern>/Registration</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>Filters.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/Login</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>ConfirmRegistrationFilter</filter-name>
+        <filter-class>Filters.ConfirmRegistrationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ConfirmRegistrationFilter</filter-name>
+        <url-pattern>/ConfirmRegistration</url-pattern>
+    </filter-mapping>
+    <!--    <error-page>
+        <error-code>405</error-code>
+        <location></location>
+    </error-page>
+    <eroro-page>
+        <error-code>404</error-code>
+        <location></location>
+    </eroro-page>-->
+    <servlet-mapping>
+        <servlet-name>addProduct</servlet-name>
+        <url-pattern>/addProduct</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!--    <welcome-file-list>
+        <welcome-file>confirm_registration.jsp</welcome-file>
+    </welcome-file-list>-->
+</web-app>
